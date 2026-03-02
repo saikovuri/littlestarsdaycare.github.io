@@ -1,35 +1,123 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Enroll your child at Little Stars Home Daycare in Hutto, TX — now accepting new families for a safe, structured daycare experience.">
   <title>Enrollment - Little Stars Home Daycare</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Nunito:wght@700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
 <header>
-  <h1>Enrollment</h1>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About Us</a>
-    <a href="schedule.html">Daily Schedule</a>
-    <a href="meals.html">Meals & Snacks</a>
-    <a href="springbreak.html">Spring Break Camp</a>
-    <a href="enrollment.html">Enrollment</a>
-    <a href="contact.html">Contact</a>
-  </nav>
+  <div class="header-inner">
+    <h1><span class="logo-icon">⭐</span> Little Stars Home Daycare</h1>
+    <button class="menu-toggle" aria-label="Toggle menu" onclick="document.querySelector('nav').classList.toggle('active')">
+      <span></span><span></span><span></span>
+    </button>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="schedule.html">Daily Schedule</a>
+      <a href="meals.html">Meals &amp; Snacks</a>
+      <a href="springbreak.html">Spring Break</a>
+      <a href="enrollment.html" class="active">Enrollment</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
 </header>
 
-<div class="container">
-  <div class="section">
-    <h2>Now Enrolling</h2>
-    <p>We welcome families looking for a safe, structured, and caring home daycare environment.</p>
+<div class="page-banner">
+  <span class="banner-icon">📝</span>
+  <h2>Enrollment</h2>
+  <p>We'd love to welcome your family to Little Stars Home Daycare.</p>
+</div>
 
-    <p>Contact us to schedule a tour, discuss availability, and receive enrollment forms.</p>
+<div class="container">
+  <div class="highlight-box">
+    <h3>🌟 Now Enrolling for 2026!</h3>
+    <p>We welcome families looking for a safe, structured, and caring home daycare environment. Spots are limited to maintain our small-group setting.</p>
+  </div>
+
+  <div class="section" style="margin-top: 40px;">
+    <h2>How It Works</h2>
+    <p>Our enrollment process is simple and personal. Here's what to expect:</p>
+  </div>
+
+  <div class="enrollment-features">
+    <div class="enrollment-feature animate-in">
+      <span class="feature-icon">📞</span>
+      <div>
+        <h3>1. Reach Out</h3>
+        <p>Call or email us to introduce your family and discuss your childcare needs and schedule.</p>
+      </div>
+    </div>
+    <div class="enrollment-feature animate-in">
+      <span class="feature-icon">🏠</span>
+      <div>
+        <h3>2. Schedule a Tour</h3>
+        <p>Visit our home daycare in person to see the space, meet us, and ask any questions you have.</p>
+      </div>
+    </div>
+    <div class="enrollment-feature animate-in">
+      <span class="feature-icon">📋</span>
+      <div>
+        <h3>3. Complete Paperwork</h3>
+        <p>We'll provide enrollment forms, emergency contacts, medical info, and all the details you need.</p>
+      </div>
+    </div>
+    <div class="enrollment-feature animate-in">
+      <span class="feature-icon">🎉</span>
+      <div>
+        <h3>4. Welcome Day</h3>
+        <p>Your child begins their Little Stars journey! We offer a gradual transition to make day one smooth and fun.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section" style="margin-top: 50px;">
+    <h2>What We Offer</h2>
+    <div class="card-grid">
+      <div class="card animate-in">
+        <span class="card-icon">👶</span>
+        <h3>Ages Served</h3>
+        <p>We care for children from infants through pre-K, with age-appropriate activities for each group.</p>
+      </div>
+      <div class="card animate-in">
+        <span class="card-icon">⏰</span>
+        <h3>Hours of Operation</h3>
+        <p>Monday through Friday, 8:00 AM to 5:00 PM. Flexible drop-off and pick-up within these hours.</p>
+      </div>
+      <div class="card animate-in">
+        <span class="card-icon">🍽️</span>
+        <h3>Meals Included</h3>
+        <p>Breakfast, lunch, and snacks are all included. We accommodate allergies and dietary preferences.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="highlight-box" style="margin-top: 40px;">
+    <h3>Ready to Get Started?</h3>
+    <p>Contact us today to check availability, schedule a tour, and take the first step toward an amazing daycare experience for your child.</p>
+    <a href="contact.html" class="btn btn-primary" style="margin-top: 16px;">Contact Us Today</a>
   </div>
 </div>
 
 <footer>
-  © 2026 Little Stars Home Daycare
+  <div class="footer-inner">
+    <div class="footer-brand">⭐ Little Stars Home Daycare</div>
+    <div class="footer-links">
+      <a href="about.html">About</a>
+      <a href="schedule.html">Schedule</a>
+      <a href="meals.html">Meals</a>
+      <a href="enrollment.html">Enroll</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="footer-copy">&copy; 2026 Little Stars Home Daycare &middot; Hutto, TX</div>
+  </div>
 </footer>
 
 </body>

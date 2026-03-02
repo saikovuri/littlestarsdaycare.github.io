@@ -1,35 +1,100 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learn about Little Stars Home Daycare — our philosophy, values, and commitment to early childhood development in Hutto, TX.">
   <title>About Us - Little Stars Home Daycare</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Nunito:wght@700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
 <header>
-  <h1>About Us</h1>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About Us</a>
-    <a href="schedule.html">Daily Schedule</a>
-    <a href="meals.html">Meals & Snacks</a>
-    <a href="springbreak.html">Spring Break Camp</a>
-    <a href="enrollment.html">Enrollment</a>
-    <a href="contact.html">Contact</a>
-  </nav>
+  <div class="header-inner">
+    <h1><span class="logo-icon">⭐</span> Little Stars Home Daycare</h1>
+    <button class="menu-toggle" aria-label="Toggle menu" onclick="document.querySelector('nav').classList.toggle('active')">
+      <span></span><span></span><span></span>
+    </button>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html" class="active">About Us</a>
+      <a href="schedule.html">Daily Schedule</a>
+      <a href="meals.html">Meals &amp; Snacks</a>
+      <a href="springbreak.html">Spring Break</a>
+      <a href="enrollment.html">Enrollment</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
 </header>
+
+<div class="page-banner">
+  <span class="banner-icon">💛</span>
+  <h2>About Us</h2>
+  <p>Get to know who we are and what drives our passion for early childhood care.</p>
+</div>
 
 <div class="container">
   <div class="section">
     <h2>Our Philosophy</h2>
     <p>We believe children learn best through play, exploration, and positive guidance. Our home daycare creates a structured yet warm environment where each child receives personalized attention.</p>
-
     <p>We focus on early learning foundations, social development, and emotional growth while ensuring every child feels safe and valued.</p>
+  </div>
+
+  <div class="values-grid">
+    <div class="value-card animate-in">
+      <span class="value-icon">🌈</span>
+      <h3>Learning Through Play</h3>
+      <p>We use hands-on, age-appropriate activities that make learning fun and spark curiosity in every child.</p>
+    </div>
+    <div class="value-card animate-in">
+      <span class="value-icon">🛡️</span>
+      <h3>Safety First</h3>
+      <p>A secure, childproofed home environment so parents have complete peace of mind while their children explore.</p>
+    </div>
+    <div class="value-card animate-in">
+      <span class="value-icon">🤗</span>
+      <h3>Nurturing Care</h3>
+      <p>Every child is treated like family with warmth, patience, and encouragement to build confidence.</p>
+    </div>
+    <div class="value-card animate-in">
+      <span class="value-icon">🌱</span>
+      <h3>Growth Mindset</h3>
+      <p>We celebrate effort and progress, helping children develop resilience and a love of learning early on.</p>
+    </div>
+    <div class="value-card animate-in">
+      <span class="value-icon">👨‍👩‍👧‍👦</span>
+      <h3>Small Group Setting</h3>
+      <p>Intentionally small class sizes to ensure individualized attention and strong relationships with each child.</p>
+    </div>
+    <div class="value-card animate-in">
+      <span class="value-icon">📖</span>
+      <h3>School Readiness</h3>
+      <p>Structured activities that build the foundational skills children need to thrive when they enter school.</p>
+    </div>
+  </div>
+
+  <div class="highlight-box" style="margin-top: 40px;">
+    <h3>We'd Love to Meet Your Family!</h3>
+    <p>Schedule a visit to see our daycare in person and learn how we can support your child's growth.</p>
+    <a href="contact.html" class="btn btn-primary" style="margin-top: 16px;">Get In Touch</a>
   </div>
 </div>
 
 <footer>
-  © 2026 Little Stars Home Daycare
+  <div class="footer-inner">
+    <div class="footer-brand">⭐ Little Stars Home Daycare</div>
+    <div class="footer-links">
+      <a href="about.html">About</a>
+      <a href="schedule.html">Schedule</a>
+      <a href="meals.html">Meals</a>
+      <a href="enrollment.html">Enroll</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="footer-copy">&copy; 2026 Little Stars Home Daycare &middot; Hutto, TX</div>
+  </div>
 </footer>
 
 </body>

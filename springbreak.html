@@ -1,35 +1,119 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Spring Break Camp at Little Stars Home Daycare — fun-filled themed activities, crafts, and outdoor play for ages 3+.">
   <title>Spring Break Camp - Little Stars Home Daycare</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Nunito:wght@700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
 <header>
-  <h1>Spring Break Camp</h1>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About Us</a>
-    <a href="schedule.html">Daily Schedule</a>
-    <a href="meals.html">Meals & Snacks</a>
-    <a href="springbreak.html">Spring Break Camp</a>
-    <a href="enrollment.html">Enrollment</a>
-    <a href="contact.html">Contact</a>
-  </nav>
+  <div class="header-inner">
+    <h1><span class="logo-icon">⭐</span> Little Stars Home Daycare</h1>
+    <button class="menu-toggle" aria-label="Toggle menu" onclick="document.querySelector('nav').classList.toggle('active')">
+      <span></span><span></span><span></span>
+    </button>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="schedule.html">Daily Schedule</a>
+      <a href="meals.html">Meals &amp; Snacks</a>
+      <a href="springbreak.html" class="active">Spring Break</a>
+      <a href="enrollment.html">Enrollment</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
 </header>
 
-<div class="container">
-  <div class="section">
-    <h2>March 16 – 20 | Ages 3+</h2>
-    <p>Join us for a fun-filled Spring Break Camp featuring themed activities, crafts, outdoor play, games, and hands-on learning experiences.</p>
+<div class="page-banner">
+  <span class="banner-icon">🌸</span>
+  <h2>Spring Break Camp 2026</h2>
+  <p>A week of adventure, creativity, and fun for kids ages 3 and up!</p>
+</div>
 
-    <p>Limited spots available. Contact us to reserve your child's place!</p>
+<div class="container">
+  <div class="highlight-box">
+    <h3>📅 March 16 – 20, 2026 &nbsp;|&nbsp; Ages 3+</h3>
+    <p>Join us for a fun-filled Spring Break Camp featuring themed activities, crafts, outdoor play, games, and hands-on learning experiences.</p>
+  </div>
+
+  <div class="section" style="margin-top: 40px;">
+    <h2>Camp Highlights</h2>
+    <p>Each day brings a new theme packed with exciting activities to keep your child entertained, engaged, and learning all week long!</p>
+  </div>
+
+  <div class="camp-highlights">
+    <div class="camp-highlight animate-in">
+      <span class="highlight-icon">🎨</span>
+      <h3>Arts &amp; Crafts</h3>
+    </div>
+    <div class="camp-highlight animate-in">
+      <span class="highlight-icon">🌳</span>
+      <h3>Outdoor Adventures</h3>
+    </div>
+    <div class="camp-highlight animate-in">
+      <span class="highlight-icon">🔬</span>
+      <h3>Science Experiments</h3>
+    </div>
+    <div class="camp-highlight animate-in">
+      <span class="highlight-icon">🎵</span>
+      <h3>Music &amp; Dance</h3>
+    </div>
+    <div class="camp-highlight animate-in">
+      <span class="highlight-icon">🧩</span>
+      <h3>Games &amp; Puzzles</h3>
+    </div>
+    <div class="camp-highlight animate-in">
+      <span class="highlight-icon">📚</span>
+      <h3>Storytime Fun</h3>
+    </div>
+  </div>
+
+  <div class="section" style="margin-top: 40px;">
+    <h2>What's Included</h2>
+    <div class="card-grid">
+      <div class="card animate-in">
+        <span class="card-icon">🍎</span>
+        <h3>Meals &amp; Snacks</h3>
+        <p>Lunch and two healthy snacks are provided every day of camp.</p>
+      </div>
+      <div class="card animate-in">
+        <span class="card-icon">🎒</span>
+        <h3>All Materials</h3>
+        <p>We supply all craft supplies, games, and activity materials — just send your child ready for fun!</p>
+      </div>
+      <div class="card animate-in">
+        <span class="card-icon">👩‍👧‍👦</span>
+        <h3>Small Groups</h3>
+        <p>Limited spots ensure personalized attention and a safe, engaging experience for every child.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="highlight-box" style="margin-top: 40px;">
+    <h3>Limited Spots Available! 🌟</h3>
+    <p>Don't miss out on an amazing spring break experience. Contact us today to reserve your child's place!</p>
+    <a href="contact.html" class="btn btn-primary" style="margin-top: 16px;">Reserve a Spot</a>
   </div>
 </div>
 
 <footer>
-  © 2026 Little Stars Home Daycare
+  <div class="footer-inner">
+    <div class="footer-brand">⭐ Little Stars Home Daycare</div>
+    <div class="footer-links">
+      <a href="about.html">About</a>
+      <a href="schedule.html">Schedule</a>
+      <a href="meals.html">Meals</a>
+      <a href="enrollment.html">Enroll</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="footer-copy">&copy; 2026 Little Stars Home Daycare &middot; Hutto, TX</div>
+  </div>
 </footer>
 
 </body>

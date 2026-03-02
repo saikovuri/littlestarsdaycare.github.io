@@ -1,40 +1,100 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="View the daily schedule at Little Stars Home Daycare — structured routines for learning, play, meals, and rest.">
   <title>Daily Schedule - Little Stars Home Daycare</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Nunito:wght@700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
 <header>
-  <h1>Daily Schedule</h1>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About Us</a>
-    <a href="schedule.html">Daily Schedule</a>
-    <a href="meals.html">Meals & Snacks</a>
-    <a href="springbreak.html">Spring Break Camp</a>
-    <a href="enrollment.html">Enrollment</a>
-    <a href="contact.html">Contact</a>
-  </nav>
+  <div class="header-inner">
+    <h1><span class="logo-icon">⭐</span> Little Stars Home Daycare</h1>
+    <button class="menu-toggle" aria-label="Toggle menu" onclick="document.querySelector('nav').classList.toggle('active')">
+      <span></span><span></span><span></span>
+    </button>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="schedule.html" class="active">Daily Schedule</a>
+      <a href="meals.html">Meals &amp; Snacks</a>
+      <a href="springbreak.html">Spring Break</a>
+      <a href="enrollment.html">Enrollment</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
 </header>
+
+<div class="page-banner">
+  <span class="banner-icon">🕐</span>
+  <h2>Daily Schedule</h2>
+  <p>A balanced mix of learning, play, meals, and rest to keep your child happy and engaged.</p>
+</div>
 
 <div class="container">
   <div class="section">
     <h2>Our Typical Day</h2>
-    <p><strong>8:00 AM:</strong> Arrival & Free Play</p>
-    <p><strong>9:00 AM:</strong> Circle Time & Learning Activities</p>
-    <p><strong>10:00 AM:</strong> Snack</p>
-    <p><strong>10:30 AM:</strong> Outdoor Play</p>
-    <p><strong>12:00 PM:</strong> Lunch</p>
-    <p><strong>1:00 PM:</strong> Quiet Time / Rest</p>
-    <p><strong>3:00 PM:</strong> Creative Activities</p>
-    <p><strong>4:00 PM:</strong> Free Play & Pick-up</p>
+    <p>Each day at Little Stars follows a consistent, age-appropriate routine that gives children security and structure while leaving room for fun and creativity.</p>
+  </div>
+
+  <div class="timeline">
+    <div class="timeline-item animate-in">
+      <div class="time">8:00 AM</div>
+      <div class="activity">🌅 Arrival &amp; Free Play — Welcome time with open-ended play to ease into the day.</div>
+    </div>
+    <div class="timeline-item animate-in">
+      <div class="time">9:00 AM</div>
+      <div class="activity">📖 Circle Time &amp; Learning Activities — Songs, stories, letters, numbers, and themed lessons.</div>
+    </div>
+    <div class="timeline-item animate-in">
+      <div class="time">10:00 AM</div>
+      <div class="activity">🍌 Morning Snack — Healthy fuel to recharge for the rest of the morning.</div>
+    </div>
+    <div class="timeline-item animate-in">
+      <div class="time">10:30 AM</div>
+      <div class="activity">🌳 Outdoor Play — Fresh air, physical activity, and nature exploration.</div>
+    </div>
+    <div class="timeline-item animate-in">
+      <div class="time">12:00 PM</div>
+      <div class="activity">🍽️ Lunch — A nutritious, freshly prepared meal together.</div>
+    </div>
+    <div class="timeline-item animate-in">
+      <div class="time">1:00 PM</div>
+      <div class="activity">😴 Quiet Time / Rest — Nap or calm activities to recharge for the afternoon.</div>
+    </div>
+    <div class="timeline-item animate-in">
+      <div class="time">3:00 PM</div>
+      <div class="activity">🎨 Creative Activities — Arts, crafts, sensory play, and imaginative exploration.</div>
+    </div>
+    <div class="timeline-item animate-in">
+      <div class="time">4:00 PM</div>
+      <div class="activity">👋 Free Play &amp; Pick-up — Wind-down time with fun activities until parents arrive.</div>
+    </div>
+  </div>
+
+  <div class="highlight-box" style="margin-top: 50px;">
+    <h3>Flexible &amp; Consistent</h3>
+    <p>While we follow a structured routine, we adapt to each child's needs and energy levels throughout the day.</p>
   </div>
 </div>
 
 <footer>
-  © 2026 Little Stars Home Daycare
+  <div class="footer-inner">
+    <div class="footer-brand">⭐ Little Stars Home Daycare</div>
+    <div class="footer-links">
+      <a href="about.html">About</a>
+      <a href="schedule.html">Schedule</a>
+      <a href="meals.html">Meals</a>
+      <a href="enrollment.html">Enroll</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="footer-copy">&copy; 2026 Little Stars Home Daycare &middot; Hutto, TX</div>
+  </div>
 </footer>
 
 </body>
