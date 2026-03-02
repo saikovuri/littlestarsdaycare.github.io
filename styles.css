@@ -61,6 +61,22 @@ header h1 {
   display: flex;
   align-items: center;
   gap: 10px;
+  white-space: nowrap;
+  min-width: 0;
+}
+
+header h1 .logo-img {
+  height: 40px;
+  width: auto;
+  border-radius: 8px;
+}
+
+.footer-brand .logo-img {
+  height: 30px;
+  width: auto;
+  vertical-align: middle;
+  border-radius: 6px;
+  margin-right: 6px;
 }
 
 header h1 .logo-icon {
@@ -693,7 +709,7 @@ footer {
   }
 
   header h1 {
-    font-size: 1.3rem;
+    font-size: 1.15rem;
   }
 
   .hero h2 {
@@ -729,7 +745,7 @@ footer {
 
 @media (max-width: 480px) {
   header h1 {
-    font-size: 1.15rem;
+    font-size: 1rem;
   }
 
   .hero h2 {

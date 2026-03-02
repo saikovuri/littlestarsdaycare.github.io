@@ -1,2 +1,2 @@
-# littlestarsdaycare.github.io
+# littlestarsdaycare
 Day care website
