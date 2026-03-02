@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Photo gallery of activities, learning, and play at Little Stars Home Daycare in Hutto, TX.">
+  <title>Gallery - Little Stars Home Daycare</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Nunito:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="littlestarslogo.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <h1><img src="littlestarslogo.png" alt="Little Stars Logo" class="logo-img"> Little Stars Home Daycare</h1>
+    <button class="menu-toggle" aria-label="Toggle menu" onclick="document.querySelector('nav').classList.toggle('active')">
+      <span></span><span></span><span></span>
+    </button>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="schedule.html">Schedule</a>
+      <a href="meals.html">Meals &amp; Snacks</a>
+      <a href="springbreak.html">Spring Break</a>
+      <a href="enrollment.html">Enrollment</a>
+      <a href="contact.html">Contact</a>
+      <div class="nav-dropdown">
+        <button class="dropdown-toggle has-active">More <span class="dropdown-arrow">&#9662;</span></button>
+        <div class="dropdown-menu">
+          <a href="gallery.html" class="active">Gallery</a>
+          <a href="faq.html">FAQ</a>
+          <a href="policies.html">Policies</a>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<div class="page-banner">
+  <span class="banner-icon">📸</span>
+  <h2>Photo Gallery</h2>
+  <p>A peek into the fun, learning, and love that happens every day at Little Stars!</p>
+</div>
+
+<div class="container">
+  <div class="section">
+    <p>Here's a glimpse of our space, activities, and happy little stars in action. We update this gallery regularly!</p>
+  </div>
+
+  <div class="gallery-grid">
+    <!-- Replace these placeholder images with your actual photos -->
+    <!-- Just add your images to the same folder and update the src and alt text -->
+    <div class="gallery-item animate-in">
+      <img src="classroom.jpg" alt="Our bright and welcoming classroom space">
+      <div class="gallery-caption">Our Classroom</div>
+    </div>
+    <div class="gallery-item animate-in">
+      <img src="gallery-crafts.jpg" alt="Children doing arts and crafts">
+      <div class="gallery-caption">Arts &amp; Crafts Time</div>
+    </div>
+    <div class="gallery-item animate-in">
+      <img src="gallery-outdoor.jpg" alt="Kids playing outside">
+      <div class="gallery-caption">Outdoor Play</div>
+    </div>
+    <div class="gallery-item animate-in">
+      <img src="gallery-reading.jpg" alt="Storytime and reading activities">
+      <div class="gallery-caption">Storytime</div>
+    </div>
+    <div class="gallery-item animate-in">
+      <img src="gallery-meals.jpg" alt="Children enjoying a healthy lunch">
+      <div class="gallery-caption">Snack Time</div>
+    </div>
+    <div class="gallery-item animate-in">
+      <img src="gallery-learning.jpg" alt="Learning letters and numbers">
+      <div class="gallery-caption">Learning Activities</div>
+    </div>
+  </div>
+
+  <div class="highlight-box" style="margin-top: 50px;">
+    <h3>Want to See More?</h3>
+    <p>Schedule a tour to see our daycare in person and meet the Little Stars family!</p>
+    <a href="contact.html" class="btn btn-primary" style="margin-top: 16px;">Schedule a Tour</a>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-info">📞 512-850-0076 &nbsp;|&nbsp; 🕐 Mon–Fri 8:30 AM – 5:30 PM</div>
+    <div class="footer-brand"><img src="littlestarslogo.png" alt="Little Stars Logo" class="logo-img">Little Stars Home Daycare</div>
+    <div class="footer-links">
+      <a href="about.html">About</a>
+      <a href="schedule.html">Schedule</a>
+      <a href="meals.html">Meals</a>
+      <a href="enrollment.html">Enroll</a>
+      <a href="faq.html">FAQ</a>
+      <a href="policies.html">Policies</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="footer-copy">&copy; 2026 Little Stars Home Daycare &middot; Hutto, TX</div>
+  </div>
+</footer>
+
+</body>
+</html>
