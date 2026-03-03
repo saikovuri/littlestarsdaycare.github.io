@@ -1417,4 +1417,11 @@ footer {
   color: #5c5470;
   font-weight: 600;
   margin-bottom: 10px;
+  white-space: nowrap;
+}
+
+@media (max-width: 480px) {
+  .footer-inner .footer-info {
+    font-size: 0.75rem;
+  }
 }
