@@ -7,7 +7,7 @@ menuToggle.addEventListener('click', function (e) {
   nav.classList.toggle('active');
 });
 
-// Close nav when clicking outside
+// Close nav when clicking/tapping outside
 document.addEventListener('click', function (e) {
   if (nav.classList.contains('active') && !nav.contains(e.target) && !menuToggle.contains(e.target)) {
     nav.classList.remove('active');
@@ -19,4 +19,11 @@ nav.querySelectorAll('a').forEach(function (link) {
   link.addEventListener('click', function () {
     nav.classList.remove('active');
   });
+});
+
+// Close nav on scroll (mobile)
+window.addEventListener('scroll', function () {
+  if (nav.classList.contains('active')) {
+    nav.classList.remove('active');
+  }
 });
