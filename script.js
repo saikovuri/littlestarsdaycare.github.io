@@ -54,14 +54,14 @@ window.addEventListener('scroll', function () {
 
   // Load from URL hash on page load
   var hash = window.location.hash.replace('#', '');
-  if (hash === 'fullday' || hash === 'halfday') {
+  if (hash === 'fullday' || hash === 'schoolday' || hash === 'halfday') {
     switchTab(hash);
   }
 
   // Handle back/forward navigation
   window.addEventListener('hashchange', function () {
     var hash = window.location.hash.replace('#', '');
-    if (hash === 'fullday' || hash === 'halfday') {
+    if (hash === 'fullday' || hash === 'schoolday' || hash === 'halfday') {
       switchTab(hash);
     }
   });

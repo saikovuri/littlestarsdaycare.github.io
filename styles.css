@@ -1087,39 +1087,261 @@ nav a.active {
 /* Tab Panels */
 .tab-panel {
   display: none;
+  opacity: 0;
+  transform: translateY(12px);
 }
 
 .tab-panel.active {
   display: block;
-  animation: tabFadeIn 0.4s ease;
+  animation: tabSlideIn 0.5s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
 }
 
-@keyframes tabFadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+@keyframes tabSlideIn {
+  0% { opacity: 0; transform: translateY(12px); }
+  100% { opacity: 1; transform: translateY(0); }
 }
 
 @media (max-width: 480px) {
   .schedule-tabs {
     gap: 8px;
+    flex-direction: column;
   }
   .schedule-tab {
     padding: 12px 20px;
     font-size: 0.92rem;
-    flex: 1;
-    min-width: 0;
+    width: 100%;
   }
   .tab-badge {
     font-size: 0.65rem;
   }
 }
 
+/* ===== Age-Breakdown Schedule Table ===== */
+.schedule-table-wrapper {
+  overflow-x: auto;
+  margin: 0 auto 30px;
+  border-radius: 18px;
+  box-shadow: 0 6px 28px rgba(92, 84, 112, 0.10);
+}
+
+.schedule-age-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: #fff;
+  font-size: 0.9rem;
+}
+
+.schedule-age-table thead th {
+  padding: 16px 14px;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.3px;
+  text-align: center;
+  white-space: nowrap;
+  position: sticky;
+  top: 0;
+  z-index: 3;
+  background: #7c5cbf;
+  color: #fff;
+  border-bottom: 2px solid #6a4daa;
+}
+
+.schedule-age-table thead tr {
+  color: #fff;
+}
+
+/* Sticky header needs wrapper with max-height for scroll */
+.schedule-table-scroll {
+  max-height: 70vh;
+  overflow-y: auto;
+  border-radius: 18px;
+}
+
+.schedule-age-table thead th.col-time {
+  width: 120px;
+  text-align: left;
+  padding-left: 18px;
+}
+
+.schedule-age-table thead th.col-activity {
+  width: 160px;
+  text-align: left;
+}
+
+.schedule-age-table thead .age-label {
+  display: block;
+  font-size: 1.1rem;
+  margin-bottom: 2px;
+}
+
+.schedule-age-table thead .age-range {
+  font-weight: 400;
+  font-size: 0.75rem;
+  opacity: 0.9;
+}
+
+.schedule-age-table td {
+  padding: 13px 14px;
+  vertical-align: middle;
+  border-bottom: 1px solid #f0eef5;
+  line-height: 1.5;
+  color: #4a4a5a;
+  font-size: 0.88rem;
+}
+
+.schedule-age-table td.td-time {
+  font-weight: 700;
+  font-family: 'Nunito', sans-serif;
+  color: #5b3e96;
+  white-space: nowrap;
+  padding-left: 18px;
+  font-size: 0.85rem;
+}
+
+.schedule-age-table td.td-activity {
+  font-weight: 600;
+  color: #3a3a4a;
+  white-space: nowrap;
+}
+
+.schedule-age-table td.td-activity .activity-icon {
+  display: inline-block;
+  width: 24px;
+  text-align: center;
+  margin-right: 4px;
+}
+
+/* Row color coding via left border */
+.schedule-age-table tr.row-play { border-left: 4px solid #26a69a; }
+.schedule-age-table tr.row-learn { border-left: 4px solid #5c6bc0; }
+.schedule-age-table tr.row-meal { border-left: 4px solid #ff8a65; }
+.schedule-age-table tr.row-outdoor { border-left: 4px solid #66bb6a; }
+.schedule-age-table tr.row-hygiene { border-left: 4px solid #b0b0b0; }
+.schedule-age-table tr.row-rest { border-left: 4px solid #9575cd; }
+.schedule-age-table tr.row-creative { border-left: 4px solid #f06292; }
+.schedule-age-table tr.row-pickup { border-left: 4px solid #ffa726; }
+
+/* Subtle alternating row backgrounds */
+.schedule-age-table tbody tr:nth-child(odd) { background: #fdfcff; }
+.schedule-age-table tbody tr:nth-child(even) { background: #f9f7fd; }
+.schedule-age-table tbody tr:hover { background: #f3eefa; }
+
+/* Pickup row highlight */
+.schedule-age-table tr.row-pickup {
+  background: linear-gradient(90deg, #fff8e1 0%, #fff3cd 100%) !important;
+}
+.schedule-age-table tr.row-pickup td {
+  font-weight: 600;
+  color: #bf6c00;
+}
+
+/* Rest row highlight */
+.schedule-age-table tr.row-rest {
+  background: #f5f0ff !important;
+}
+
+/* Age column pills for mobile cards */
+.age-detail {
+  display: block;
+  line-height: 1.55;
+}
+
+/* ===== Color Legend ===== */
+.schedule-legend {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px 18px;
+  margin: 0 auto 24px;
+  padding: 14px 20px;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(92, 84, 112, 0.07);
+  border: 1px solid #f0eef5;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8rem;
+  color: #5a5a6a;
+  font-weight: 500;
+}
+
+.legend-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+  flex-shrink: 0;
+}
+
+.legend-dot.dot-play { background: #26a69a; }
+.legend-dot.dot-learn { background: #5c6bc0; }
+.legend-dot.dot-meal { background: #ff8a65; }
+.legend-dot.dot-outdoor { background: #66bb6a; }
+.legend-dot.dot-hygiene { background: #b0b0b0; }
+.legend-dot.dot-rest { background: #9575cd; }
+.legend-dot.dot-creative { background: #f06292; }
+.legend-dot.dot-pickup { background: #ffa726; }
+
+/* ===== Table Includes Summary ===== */
+.table-includes {
+  text-align: center;
+  padding: 14px 20px;
+  margin: -6px auto 28px;
+  background: linear-gradient(135deg, #f5f0ff 0%, #eee8f7 100%);
+  border-radius: 0 0 14px 14px;
+  font-size: 0.85rem;
+  color: #5a5a6a;
+  border: 1px solid #e8e0f0;
+  border-top: none;
+  max-width: 100%;
+}
+
+.table-includes strong {
+  color: #5b3e96;
+}
+
+.table-includes .includes-list {
+  display: inline;
+}
+
+.table-includes .includes-item {
+  display: inline-block;
+  background: #fff;
+  padding: 3px 10px;
+  border-radius: 20px;
+  margin: 3px 3px;
+  font-size: 0.78rem;
+  border: 1px solid #e8e0f0;
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .schedule-age-table {
+    font-size: 0.82rem;
+    min-width: 650px;
+  }
+  .schedule-age-table thead th {
+    padding: 12px 10px;
+    font-size: 0.78rem;
+  }
+  .schedule-age-table td {
+    padding: 10px;
+    font-size: 0.8rem;
+  }
+}
+
 /* ===== Half-Day Program Cards ===== */
 .halfday-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr;
+  max-width: 540px;
+  margin: 10px auto 0;
   gap: 24px;
-  margin-top: 10px;
 }
 
 .halfday-card {
