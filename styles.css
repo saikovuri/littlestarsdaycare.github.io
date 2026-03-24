@@ -1753,14 +1753,21 @@ footer {
 }
 
 .animate-in {
-  animation: fadeInUp 0.6s ease forwards;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
-.animate-in:nth-child(2) { animation-delay: 0.1s; }
-.animate-in:nth-child(3) { animation-delay: 0.2s; }
-.animate-in:nth-child(4) { animation-delay: 0.3s; }
-.animate-in:nth-child(5) { animation-delay: 0.4s; }
-.animate-in:nth-child(6) { animation-delay: 0.5s; }
+.animate-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.animate-in:nth-child(2) { transition-delay: 0.1s; }
+.animate-in:nth-child(3) { transition-delay: 0.2s; }
+.animate-in:nth-child(4) { transition-delay: 0.3s; }
+.animate-in:nth-child(5) { transition-delay: 0.4s; }
+.animate-in:nth-child(6) { transition-delay: 0.5s; }
 
 /* ===== Responsive ===== */
 @media (max-width: 768px) {
@@ -2062,6 +2069,12 @@ footer {
 
 .faq-item[open] {
   box-shadow: 0 6px 25px rgba(92, 84, 112, 0.12);
+  border-color: #9575cd;
+}
+
+.faq-item[open] .faq-question {
+  background: rgba(149, 117, 205, 0.06);
+  color: #3d3555;
 }
 
 .faq-question {
@@ -2429,5 +2442,108 @@ footer {
 
   body {
     font-size: 11pt;
+  }
+}
+
+/* ===== Camp Hero Image with Overlay ===== */
+.camp-hero-image {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto 30px;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.camp-hero-image img {
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(92, 84, 112, 0.15);
+  display: block;
+}
+
+.camp-hero-image::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 20px;
+  right: 20px;
+  bottom: 0;
+  border-radius: 20px;
+  background: linear-gradient(
+    to bottom,
+    rgba(149, 117, 205, 0.1),
+    rgba(92, 84, 112, 0.35)
+  );
+  pointer-events: none;
+}
+
+/* ===== Back to Top Button ===== */
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #5c5470;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(92, 84, 112, 0.3);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease, background 0.3s ease;
+  z-index: 999;
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.back-to-top:hover {
+  background: #9575cd;
+}
+
+/* ===== Dual Announcement Banners ===== */
+.banner-row {
+  display: flex;
+}
+
+.banner-row .announcement-banner {
+  flex: 1;
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.banner-row .announcement-banner:last-child {
+  border-right: none;
+}
+
+@media (max-width: 768px) {
+  .banner-row {
+    flex-direction: column;
+  }
+
+  .banner-row .announcement-banner {
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  }
+
+  .banner-row .announcement-banner:last-child {
+    border-bottom: none;
+  }
+
+  .back-to-top {
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    font-size: 1.1rem;
   }
 }
