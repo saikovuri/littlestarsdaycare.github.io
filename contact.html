@@ -70,21 +70,43 @@
     <p>Fill out the form below and we'll get back to you as soon as possible.</p>
 
     <form class="contact-form" action="https://formspree.io/f/mnjbkddb" method="POST">
-      <div class="form-group">
-        <label for="name">Your Name</label>
-        <input type="text" id="name" name="name" placeholder="" required>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone">
+        </div>
       </div>
       <div class="form-group">
         <label for="email">Email Address</label>
-        <input type="email" id="email" name="email" placeholder="" required>
+        <input type="email" id="email" name="email" required>
       </div>
-      <div class="form-group">
-        <label for="phone">Phone Number</label>
-        <input type="tel" id="phone" name="phone" placeholder="">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="kidname">Child's Name</label>
+          <input type="text" id="kidname" name="kidname">
+        </div>
+        <div class="form-group">
+          <label for="kidage">Child's Age</label>
+          <input type="text" id="kidage" name="kidage" placeholder="e.g. 18 months">
+        </div>
       </div>
-      <div class="form-group">
-        <label for="subject">Subject</label>
-        <select id="subject" name="subject">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="potty">Potty Trained?</label>
+          <select id="potty" name="potty">
+            <option value="">— Select —</option>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+            <option value="in-progress">In Progress</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="subject">Subject</label>
+          <select id="subject" name="subject">
           <option value="general">General Inquiry</option>
           <option value="enrollment">Enrollment Question</option>
           <option value="tour">Schedule a Tour</option>
@@ -92,6 +114,7 @@
           <!-- <option value="springcamp">Spring Camp</option> -->
           <option value="summercamp">Summer Camp</option>
         </select>
+        </div>
       </div>
       <div class="form-group">
         <label for="message">Message</label>
