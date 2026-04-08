@@ -2192,6 +2192,16 @@ footer {
   background: #fff;
 }
 
+.gallery-featured {
+  border: 2px solid #e8b931;
+}
+
+.gallery-featured .gallery-caption {
+  background: linear-gradient(135deg, #fff8e1, #fff);
+  color: #b8860b;
+  font-weight: 700;
+}
+
 /* ===== Policy Cards ===== */
 .policy-section {
   display: flex;
